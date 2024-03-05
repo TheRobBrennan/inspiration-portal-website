@@ -34,10 +34,11 @@ const Header = () => {
     ${openNavigation ? 'bg-n-8' : 'bg-n-8/90 backdrop-blur-sm'}`} >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
 
-        {/* TODO: Replace with Inspiration Portal logo */}
         {/* Logo */}
-        <a className='block w-[12rem] xl:mr-8' href='/#hero'>
-          <div className="font-cherokee text-2xl">Inspiration Portal</div>
+        <a className='flex items-center space-x-2 w-[12rem] xl:mr-8' href='/#hero'>
+          {/* TODO: Discuss imagery and nav bar considerations */}
+          {/* <img src='/src/assets/favicon_io/planets_align_in_front_of_the_sun.png' alt='Planets Align' className='w-6 h-6' /> */}
+          <span className='font-cherokee text-xl'>Inspiration Portal</span>
         </a>
 
         {/* Navigation */}
