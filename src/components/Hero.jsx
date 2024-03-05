@@ -58,7 +58,7 @@ const Hero = () => {
 
                 {/* Planetary eclipse */}
                 <img
-                  src="src/assets/favicon_io/planets_align_in_front_of_the_sun.png"
+                  src="/planets_align_in_front_of_the_sun_2400x1800.png"
                   className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
                   width={1024}
                   height={490}
