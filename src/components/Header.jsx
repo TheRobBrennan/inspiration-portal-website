@@ -36,7 +36,8 @@ const Header = () => {
 
         {/* Logo */}
         <a className='block w-[12rem] xl:mr-8' href='/#hero'>
-          <img src={brainwave} width={190} height={40} alt='Brainwave' />
+          {/* TODO: Replace with Inspiration Portal logo */}
+          <img src={brainwave} width={190} height={40} alt='Inspiration Portal' />
         </a>
 
         {/* Navigation */}
@@ -56,6 +57,7 @@ const Header = () => {
         </nav>
 
         {/* Account */}
+        {/* TODO: Hide account options after demo */}
         <a href="#signup" className='button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block'>
           New account
         </a>
@@ -63,6 +65,7 @@ const Header = () => {
           Sign in
         </Button>
 
+        {/* Hamburger */}
         <Button className={`ml-auto lg:hidden`} px='px-3' onClick={toggleNavigation}>
           <MenuSvg openNavigation={openNavigation} />
         </Button>
