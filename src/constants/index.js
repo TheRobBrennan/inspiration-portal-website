@@ -36,6 +36,7 @@ import {
   yourlogo,
 } from "../assets/index";
 
+// TODO: Update navigation as desired
 export const navigation = [
   {
     id: "0",
@@ -75,6 +76,7 @@ export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
 
+// TODO: Simplify to one or fewer logos to demonstrate UI appearance
 export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
 export const brainwaveServices = [
@@ -294,6 +296,7 @@ export const benefits = [
   },
 ];
 
+// TODO: Update social links with Inspiration Portal
 export const socials = [
   {
     id: "0",

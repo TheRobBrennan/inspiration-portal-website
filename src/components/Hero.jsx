@@ -24,13 +24,13 @@ const Hero = () => {
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
 
           {/* Heading */}
-          <h1 className="h1 mb-6">
-            Explore the Possibilities of&nbsp;AI&nbsp;Chatting with {` `}
+          <h1 className="h1 mb-9">
+            {/* Amplifying Human Potential */}
             <span className="inline-block relative">
-              Brainwave{" "}
+              Amplifying Human Potential
               <img
                 src={curve}
-                className="absolute top-full left-0 w-full xl:-mt-2"
+                className="absolute top-full left-0 w-full xl:-mt-1.4"
                 width={624}
                 height={28}
                 alt="Curve"
@@ -40,12 +40,11 @@ const Hero = () => {
 
           {/* Subheading */}
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            Unleash the power of AI within Brainwave. Upgrade your productivity
-            with Brainwave, the open AI chat app.
+            Words. Words. Words. Words.
           </p>
 
           {/* CTA */}
-          <Button href="/pricing" white>
+          <Button href="#pricing" white>
             Get started
           </Button>
         </div>

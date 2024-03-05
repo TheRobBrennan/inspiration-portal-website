@@ -19,7 +19,7 @@ const Services = () => {
         {/* Heading and subheading */}
         <Heading
           title="Generative AI made for creators."
-          text="Brainwave unlocks the potential of AI-powered applications"
+          text="Inspiration Portal unlocks the potential of AI-powered applications"
         />
 
         {/* Bento box */}
@@ -40,7 +40,7 @@ const Services = () => {
             <div className="relative z-1 max-w-[17rem] ml-auto">
               <h4 className="h4 mb-4">Smartest AI</h4>
               <p className="body-2 mb-[3rem] text-n-3">
-                Brainwave unlocks the potential of AI-powered applications
+                Inspiration Portal unlocks the potential of AI-powered applications
               </p>
               <ul className="body-2">
                 {brainwaveServices.map((item, index) => (

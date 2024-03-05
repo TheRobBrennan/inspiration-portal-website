@@ -13,7 +13,7 @@ const Benefits = () => {
         {/* Title */}
         <Heading
           className="md:max-w-md lg:max-w-2xl"
-          title="Chat Smarter, Not Harder with Brainwave"
+          title="Chat Smarter, Not Harder with Inspiration Portal"
         />
 
         <div className="flex flex-wrap gap-6 mb-10">

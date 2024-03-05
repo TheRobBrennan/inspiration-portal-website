@@ -9,7 +9,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <p className="caption text-n-4 lg:block">
-          © {new Date().getFullYear()}. All rights reserved.
+          © {new Date().getFullYear()} Inspiration Portal. All rights reserved.
         </p>
 
         {/* Social links */}
