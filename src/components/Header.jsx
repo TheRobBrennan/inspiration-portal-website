@@ -34,10 +34,10 @@ const Header = () => {
     ${openNavigation ? 'bg-n-8' : 'bg-n-8/90 backdrop-blur-sm'}`} >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
 
+        {/* TODO: Replace with Inspiration Portal logo */}
         {/* Logo */}
         <a className='block w-[12rem] xl:mr-8' href='/#hero'>
-          {/* TODO: Replace with Inspiration Portal logo */}
-          <img src={brainwave} width={190} height={40} alt='Inspiration Portal' />
+          <div className="font-cherokee text-2xl">Inspiration Portal</div>
         </a>
 
         {/* Navigation */}
