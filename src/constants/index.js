@@ -36,6 +36,7 @@ import {
   yourlogo,
 } from "../assets/index";
 
+// TODO: Update navigation as desired
 export const navigation = [
   {
     id: "0",
@@ -294,6 +295,7 @@ export const benefits = [
   },
 ];
 
+// TODO: Update social links with Inspiration Portal
 export const socials = [
   {
     id: "0",
