@@ -1,4 +1,4 @@
-import { curve, heroBackground, robot } from "../assets"
+import { curve, heroBackground } from "../assets"
 import Button from "./Button"
 import Section from "./Section"
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero"
@@ -56,9 +56,9 @@ const Hero = () => {
 
               <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
 
-                {/* Robot */}
+                {/* Planetary eclipse */}
                 <img
-                  src={robot}
+                  src="/planets_align_in_front_of_the_sun_2400x1800.png"
                   className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
                   width={1024}
                   height={490}
