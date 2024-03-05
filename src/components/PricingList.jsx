@@ -30,6 +30,7 @@ const PricingList = () => {
 
           <Button
             className="w-full mb-6"
+            // TODO: Update mailto: address
             href={item.price ? "/pricing" : "mailto:contact@jsmastery.pro"}
             white={!!item.price} // If there is a price, the button is white
           >
