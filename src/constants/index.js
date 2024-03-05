@@ -36,6 +36,9 @@ import {
   yourlogo,
 } from "../assets/index";
 
+// TODO: Update the contact email address
+export const contactEmailAddress ="me@mail.com"
+
 // TODO: Update navigation as desired
 export const navigation = [
   {

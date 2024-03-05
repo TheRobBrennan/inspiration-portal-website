@@ -1,5 +1,5 @@
 import { check } from "../assets"
-import { pricing } from "../constants"
+import { pricing, contactEmailAddress } from "../constants"
 import Button from "./Button"
 
 const PricingList = () => {
@@ -30,8 +30,7 @@ const PricingList = () => {
 
           <Button
             className="w-full mb-6"
-            // TODO: Update mailto: address
-            href={item.price ? "/pricing" : "mailto:contact@jsmastery.pro"}
+            href={item.price ? "/pricing" : `mailto:${contactEmailAddress}`}
             white={!!item.price} // If there is a price, the button is white
           >
             {item.price ? "Get started" : "Contact us"}
