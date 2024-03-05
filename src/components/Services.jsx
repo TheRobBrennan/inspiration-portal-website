@@ -59,7 +59,7 @@ const Services = () => {
           </div>
 
           {/* Bento box with two sections instead of one big one */}
-          {/* NOTE: We are using grid here in addition to flex from above 🤓 */}
+          {/* We are using grid here in addition to flex from above 🤓 */}
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
 
             {/* Secondary focus - Left side */}

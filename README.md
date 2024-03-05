@@ -1,27 +1,23 @@
 # Welcome
 
-A greenfield project to explore developing the public-facing website for Inspiration Portal.
+The public-facing website for Inspiration Portal at [https://inspiration-portal-website.vercel.app](https://inspiration-portal-website.vercel.app)
 
 ## Getting started
 
-Create a new Vite project with Tailwind CSS:
+To run this project locally:
 
 ```sh
-# Install Tailwind CSS with Vite - https://tailwindcss.com/docs/guides/vite
-
-## Create a new Vite + React project
-npm create vite@latest ./ -- --template react
-
 ## Install dependencies
-npm install
+% npm install
 
-## Install Tailwind CSS
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+## Start the Vite dev server
+% npm run dev
+VITE v5.1.4  ready in 109 ms
 
-## Configure your template paths by modifying the content property of ./tailwind.config.js
-## Add the Tailwind directives to your CSS at ./src/index.css
+➜  Local:   http://localhost:5173/
+➜  Network: use --host to expose
+➜  press h + enter to show help
 
-## Start using Tailwind CSS + Vite
-npm run dev
 ```
+
+In the above example, the local application with hot module reloading is available at [http://localhost:5173](http://localhost:5173) 🤓

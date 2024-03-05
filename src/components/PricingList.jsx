@@ -8,7 +8,7 @@ const PricingList = () => {
       {pricing.map((item) => (
         <div
           key={item.id}
-          // NOTE: We are using even to style the middle item of our three prices a little differently to make it stand out
+          // We are using even to style the middle item of our three prices a little differently to make it stand out
           className="w-[19rem] max-lg:w-full h-full px-6 bg-n-8 border border-n-6 rounded-[2rem] lg:w-auto even:py-14 odd:py-8 odd:my-4 [&>h4]:first:text-color-2 [&>h4]:even:text-color-1 [&>h4]:last:text-color-3"
         >
           <h4 className="h4 mb-4">{item.title}</h4>
@@ -30,6 +30,7 @@ const PricingList = () => {
 
           <Button
             className="w-full mb-6"
+            // TODO: Update mailto: address
             href={item.price ? "/pricing" : "mailto:contact@jsmastery.pro"}
             white={!!item.price} // If there is a price, the button is white
           >
