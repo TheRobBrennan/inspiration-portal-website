@@ -35,10 +35,11 @@ const Header = () => {
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
 
         {/* Logo */}
-        <a className='flex items-center space-x-2 w-[12rem] xl:mr-8' href='/#hero'>
+        <a className='flex items-center space-x-2 xl:mr-8' href='/#hero'>
           {/* TODO: Discuss imagery and nav bar considerations */}
+          {/* Uncomment and adjust image size as needed */}
           {/* <img src='/src/assets/favicon_io/planets_align_in_front_of_the_sun.png' alt='Planets Align' className='w-6 h-6' /> */}
-          <span className='font-cherokee text-xl'>Inspiration Portal</span>
+          <span className='font-cherokee text-4xl whitespace-nowrap'>Inspiration Portal</span>
         </a>
 
         {/* Navigation */}
