@@ -37,7 +37,6 @@ const Header = () => {
         {/* Logo */}
         <a className='flex items-center space-x-2 xl:mr-8' href='/#hero'>
           {/* TODO: Discuss imagery and nav bar considerations */}
-          {/* Uncomment and adjust image size as needed */}
           {/* <img src='/src/assets/favicon_io/planets_align_in_front_of_the_sun.png' alt='Planets Align' className='w-6 h-6' /> */}
           <span className='font-cherokee text-4xl whitespace-nowrap'>Inspiration Portal</span>
         </a>
