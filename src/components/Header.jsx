@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { disablePageScroll, enablePageScroll } from 'scroll-lock'
 
+import { brainwave } from '../assets'
 import { navigation } from '../constants'
 import Button from './Button'
 import MenuSvg from '../assets/svg/MenuSvg'
@@ -36,6 +37,7 @@ const Header = () => {
         {/* Logo */}
         <a className='flex items-center space-x-2 xl:mr-8' href='/#hero'>
           {/* TODO: Discuss imagery and nav bar considerations */}
+          {/* <img src={brainwave} width={190} height={40} alt='Inspiration Portal' /> */}
           {/* <img src='/src/assets/favicon_io/planets_align_in_front_of_the_sun.png' alt='Planets Align' className='w-6 h-6' /> */}
           <span className='font-cherokee text-4xl whitespace-nowrap'>Inspiration Portal</span>
         </a>
