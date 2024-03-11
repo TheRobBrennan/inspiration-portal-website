@@ -7,9 +7,6 @@ The public-facing website for Inspiration Portal at [https://inspiration-portal-
 To run this project locally:
 
 ```sh
-## Navigate to the appropriate directory (ex: Vite + React and Tailwind CSS)
-% cd apps/demo-01
-
 ## Install dependencies
 % npm install
 
