@@ -5,7 +5,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Site name on the left, styled similar to SpaceX for demonstration purposes */}
         <h1 className="text-xl font-sans">
-          <a href="#home" className="hover:text-gray-400">Inspiration Portal</a>
+          <a href="/" className="hover:text-gray-400">Inspiration Portal</a>
         </h1>
 
         {/* Right-aligned navigation, simplified to match the SpaceX aesthetic */}
