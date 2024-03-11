@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useState, useEffect } from 'react';
 
 const Header = () => {
@@ -52,7 +52,7 @@ const Header = () => {
               <li key={section}>
                 <a
                   href={`#${section}`}
-                  className={`nav-link ${activeSection === section ? 'active' : ''}`}
+                  className={`nav-link ${activeSection === section ? 'active-text' : ''}`} // Apply 'active-text' class to the active section
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </a>
@@ -63,7 +63,6 @@ const Header = () => {
       </div>
     </header>
   );
-
 };
 
 export default Header;
