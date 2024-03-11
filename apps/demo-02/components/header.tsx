@@ -1,19 +1,16 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { SECTIONS } from '../constants/constants'; // Adjust the path as necessary
 
 const Header = () => {
-  // State to keep track of the currently active section
   const [activeSection, setActiveSection] = useState('');
 
   const handleScroll = () => {
-    // Define your section IDs
-    const sections = ['section1', 'section2', 'section3'];
-    // Determine the current scroll position, adjusted to account for different viewports
+    const sectionIds = SECTIONS.map(section => section.id);
     const scrollPosition = window.scrollY + window.innerHeight / 3;
 
-    // Find the section that matches the current scroll position
-    const selectedSection = sections.find((section) => {
-      const el = document.getElementById(section);
+    const selectedSection = sectionIds.find((id) => {
+      const el = document.getElementById(id);
       if (el) {
         const top = el.offsetTop;
         const height = el.offsetHeight;
@@ -22,7 +19,6 @@ const Header = () => {
       return false;
     });
 
-    // Update the active section state
     if (selectedSection) {
       setActiveSection(selectedSection);
     } else {
@@ -32,11 +28,7 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -48,13 +40,13 @@ const Header = () => {
 
         <nav>
           <ul className="flex space-x-10 font-sans">
-            {['section1', 'section2', 'section3'].map((section) => (
-              <li key={section}>
+            {SECTIONS.map((section) => (
+              <li key={section.id}>
                 <a
-                  href={`#${section}`}
-                  className={`nav-link ${activeSection === section ? 'active-text' : ''}`} // Apply 'active-text' class to the active section
+                  href={`#${section.id}`}
+                  className={`nav-link ${activeSection === section.id ? 'active-text' : ''}`}
                 >
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                  {section.name}
                 </a>
               </li>
             ))}
