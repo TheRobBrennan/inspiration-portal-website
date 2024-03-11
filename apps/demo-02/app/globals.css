@@ -56,7 +56,8 @@ body {
   /* Align at the bottom of the link */
   left: 50%;
   /* Center the growth */
-  background-color: white;
+  background-color: #fffbeb;
+  /* A color similar to a white hot sun */
   transition: 0.3s ease;
   transition-property: width, left;
 }
@@ -76,7 +77,7 @@ body {
 }
 
 .active-text {
-  font-weight: bold;
-  color: #4CAF50;
-  /* Example color - bright green */
+  /* font-weight: bold; */
+  color: #a855f7;
+  /* Tailwind's purple-500 equivalent */
 }
