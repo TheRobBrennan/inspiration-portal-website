@@ -4,7 +4,8 @@
   "description": "Public website for Inspiration Portal",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "echo \"Error: Please navigate to a specific directory to run the desired application.\n\" && exit 1",
+    "test": "echo \"Error: no test(s) specified\n\" && exit 1"
   },
   "repository": {
     "type": "git",
