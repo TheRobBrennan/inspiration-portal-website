@@ -43,11 +43,11 @@ const Header = () => {
     <header className="bg-black text-white p-5 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-sans">
-          <a href="/" className="nav-link">Inspiration Portal</a>
+          <a href="/" className="">Inspiration Portal</a>
         </h1>
 
         <nav>
-          <ul className="flex space-x-10">
+          <ul className="flex space-x-10 font-sans">
             {['section1', 'section2', 'section3'].map((section) => (
               <li key={section}>
                 <a
