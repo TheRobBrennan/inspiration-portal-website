@@ -43,7 +43,7 @@ const Header = () => {
     <header className="bg-black text-white p-5 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-semibold font-sans">
-          <a href="#home" className="hover:text-gray-400">Inspiration Portal</a>
+          <a href="#home" className="nav-link">Inspiration Portal</a>
         </h1>
 
         <nav>
@@ -52,7 +52,8 @@ const Header = () => {
               <li key={section}>
                 <a
                   href={`#${section}`}
-                  className={`hover:text-gray-400 ${activeSection === section ? 'text-gray-400 underline' : 'text-white'}`}
+                  className={`nav-link ${activeSection === section ? 'underline' : ''}`}
+                  style={{ textDecoration: activeSection === section ? 'underline' : 'none' }}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </a>
@@ -63,6 +64,7 @@ const Header = () => {
       </div>
     </header>
   );
+
 };
 
 export default Header;

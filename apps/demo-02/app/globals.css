@@ -35,3 +35,26 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Navigation menu styling */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
