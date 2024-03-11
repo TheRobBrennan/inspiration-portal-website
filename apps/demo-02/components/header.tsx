@@ -1,10 +1,11 @@
 const Header = () => {
   return (
-    <header className="bg-black text-white p-5">
+    // Added sticky top-0 and z-50 classes for sticky header behavior
+    <header className="bg-black text-white p-5 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Site name on the left, styled similar to SpaceX for demonstration purposes */}
         <h1 className="text-xl font-semibold font-sans">
-          <a href="#section1" className="hover:text-gray-400">Inspiration Portal</a>
+          <a href="#home" className="hover:text-gray-400">Inspiration Portal</a>
         </h1>
 
         {/* Right-aligned navigation, simplified to match the SpaceX aesthetic */}
