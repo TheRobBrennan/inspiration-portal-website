@@ -10,7 +10,7 @@ const Header = () => {
 
         {/* Right-aligned navigation, simplified to match the SpaceX aesthetic */}
         <nav>
-          <ul className="flex space-x-10">
+          <ul className="flex space-x-10 font-sans">
             <li><a href="#section1" className="hover:text-gray-400">Section 1</a></li>
             <li><a href="#section2" className="hover:text-gray-400">Section 2</a></li>
             <li><a href="#section3" className="hover:text-gray-400">Section 3</a></li>
