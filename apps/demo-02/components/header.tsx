@@ -52,8 +52,7 @@ const Header = () => {
               <li key={section}>
                 <a
                   href={`#${section}`}
-                  className={`nav-link ${activeSection === section ? 'underline' : ''}`}
-                  style={{ textDecoration: activeSection === section ? 'underline' : 'none' }}
+                  className={`nav-link ${activeSection === section ? 'active' : ''}`}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </a>
