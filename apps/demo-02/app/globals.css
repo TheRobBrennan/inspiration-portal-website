@@ -35,3 +35,49 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Navigation styling */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 5px;
+  /* Adjust as needed */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  /* Start with no underline */
+  height: 2px;
+  bottom: 0;
+  /* Align at the bottom of the link */
+  left: 50%;
+  /* Center the growth */
+  background-color: #fffbeb;
+  /* A color similar to a white hot sun */
+  transition: 0.3s ease;
+  transition-property: width, left;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+  /* Full width on hover/active */
+  left: 0;
+  /* Start from the left */
+}
+
+/* Specific styles to indicate the active link */
+.nav-link.active::after {
+  background-color: #4CAF50;
+  /* Or any color to indicate active state */
+}
+
+.active-text {
+  /* font-weight: bold; */
+  color: #a855f7;
+  /* Tailwind's purple-500 equivalent */
+}

@@ -1,19 +1,55 @@
+'use client';
+import { useState, useEffect } from 'react';
+import { SECTIONS } from '../constants/constants'; // Adjust the path as necessary
+
 const Header = () => {
+  const [activeSection, setActiveSection] = useState('');
+
+  const handleScroll = () => {
+    const sectionIds = SECTIONS.map(section => section.id);
+    const scrollPosition = window.scrollY + window.innerHeight / 3;
+
+    const selectedSection = sectionIds.find((id) => {
+      const el = document.getElementById(id);
+      if (el) {
+        const top = el.offsetTop;
+        const height = el.offsetHeight;
+        return top <= scrollPosition && top + height > scrollPosition;
+      }
+      return false;
+    });
+
+    if (selectedSection) {
+      setActiveSection(selectedSection);
+    } else {
+      setActiveSection('');
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    // Added sticky top-0 and z-50 classes for sticky header behavior
     <header className="bg-black text-white p-5 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Site name on the left, styled similar to SpaceX for demonstration purposes */}
         <h1 className="text-xl font-sans">
-          <a href="/" className="hover:text-gray-400">Inspiration Portal</a>
+          <a href="/" className="">Inspiration Portal</a>
         </h1>
 
-        {/* Right-aligned navigation, simplified to match the SpaceX aesthetic */}
         <nav>
           <ul className="flex space-x-10 font-sans">
-            <li><a href="#section1" className="hover:text-gray-400">Section 1</a></li>
-            <li><a href="#section2" className="hover:text-gray-400">Section 2</a></li>
-            <li><a href="#section3" className="hover:text-gray-400">Section 3</a></li>
+            {SECTIONS.map((section) => (
+              <li key={section.id}>
+                <a
+                  href={`#${section.id}`}
+                  className={`nav-link ${activeSection === section.id ? 'active-text' : ''}`}
+                >
+                  {section.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
