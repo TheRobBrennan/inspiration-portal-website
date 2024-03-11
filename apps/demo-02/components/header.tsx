@@ -1,19 +1,63 @@
+'use client'
+import { useState, useEffect } from 'react';
+
 const Header = () => {
+  // State to keep track of the currently active section
+  const [activeSection, setActiveSection] = useState('');
+
+  const handleScroll = () => {
+    // Define your section IDs
+    const sections = ['section1', 'section2', 'section3'];
+    // Determine the current scroll position, adjusted to account for different viewports
+    const scrollPosition = window.scrollY + window.innerHeight / 3;
+
+    // Find the section that matches the current scroll position
+    const selectedSection = sections.find((section) => {
+      const el = document.getElementById(section);
+      if (el) {
+        const top = el.offsetTop;
+        const height = el.offsetHeight;
+        return top <= scrollPosition && top + height > scrollPosition;
+      }
+      return false;
+    });
+
+    // Update the active section state
+    if (selectedSection) {
+      setActiveSection(selectedSection);
+    } else {
+      setActiveSection('');
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    // Added sticky top-0 and z-50 classes for sticky header behavior
     <header className="bg-black text-white p-5 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Site name on the left, styled similar to SpaceX for demonstration purposes */}
-        <h1 className="text-xl font-sans">
-          <a href="/" className="hover:text-gray-400">Inspiration Portal</a>
+        <h1 className="text-xl font-semibold font-sans">
+          <a href="#home" className="hover:text-gray-400">Inspiration Portal</a>
         </h1>
 
-        {/* Right-aligned navigation, simplified to match the SpaceX aesthetic */}
         <nav>
-          <ul className="flex space-x-10 font-sans">
-            <li><a href="#section1" className="hover:text-gray-400">Section 1</a></li>
-            <li><a href="#section2" className="hover:text-gray-400">Section 2</a></li>
-            <li><a href="#section3" className="hover:text-gray-400">Section 3</a></li>
+          <ul className="flex space-x-10">
+            {['section1', 'section2', 'section3'].map((section) => (
+              <li key={section}>
+                <a
+                  href={`#${section}`}
+                  className={`hover:text-gray-400 ${activeSection === section ? 'text-gray-400 underline' : 'text-white'}`}
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
