@@ -4,7 +4,7 @@ const Header = () => {
     <header className="bg-black text-white p-5 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Site name on the left, styled similar to SpaceX for demonstration purposes */}
-        <h1 className="text-xl font-semibold font-sans">
+        <h1 className="text-xl font-sans">
           <a href="#home" className="hover:text-gray-400">Inspiration Portal</a>
         </h1>
 
